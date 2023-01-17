@@ -5,29 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="474c9c23-6b8c-4120-b237-e9c0bd30bf41" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToolRental.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/DefaultToolRental.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/HolidayManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/ToolRental.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/tools/DefaultTool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/tools/DefaultToolFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/tools/Tool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/tools/ToolFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/tools/brands/Brand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/tools/brands/DefaultBrand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/tools/types/Chainsaw.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/tools/types/DefaultToolTypeFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/tools/types/Jackhammer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/tools/types/Ladder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/tools/types/ToolType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/tools/types/ToolTypeFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/DefaultToolRentalTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/tools/brands/BrandFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/tools/brands/DeWaltBrand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/tools/brands/DefaultBrandFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/tools/brands/RidgidBrand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/tools/brands/StihlBrand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/tools/brands/WernerBrand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/HolidayManagerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/tools/DefaultToolFactoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/tools/brand/DefaultBrandFactoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/tools/types/DefaultToolTypeFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/DefaultToolRental.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/DefaultToolRental.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/HolidayManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/HolidayManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/tools/DefaultTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/tools/DefaultTool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/tools/DefaultToolFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/tools/DefaultToolFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/tools/Tool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/tools/Tool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/tools/brands/DefaultBrand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/tools/types/DefaultToolTypeFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/tools/types/DefaultToolTypeFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/tools/types/ToolTypeFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/tools/types/ToolTypeFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/DefaultToolRentalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/DefaultToolRentalTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +51,6 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
@@ -65,26 +61,43 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.DefaultToolRentalTest">
-    <configuration name="DefaultToolRentalTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.test in ToolRental">
+    <configuration name="DefaultToolFactoryTest.testGenerateTool" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ToolRental" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="test.tools.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.DefaultToolRentalTest" />
+      <option name="PACKAGE_NAME" value="test.tools" />
+      <option name="MAIN_CLASS_NAME" value="test.tools.DefaultToolFactoryTest" />
+      <option name="METHOD_NAME" value="testGenerateTool" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DefaultToolTypeFactoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ToolRental" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.tools.types.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.tools.types" />
+      <option name="MAIN_CLASS_NAME" value="test.tools.types.DefaultToolTypeFactoryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DefaultToolRentalTest.one" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HolidayManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ToolRental" />
       <extension name="coverage">
         <pattern>
@@ -93,14 +106,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.DefaultToolRentalTest" />
-      <option name="METHOD_NAME" value="one" />
+      <option name="MAIN_CLASS_NAME" value="test.HolidayManagerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HolidayManagerTest.testIsHoliday" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ToolRental" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.HolidayManagerTest" />
+      <option name="METHOD_NAME" value="testIsHoliday" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DefaultToolRentalTest.testIndependenceDay" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="test in ToolRental" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ToolRental" />
       <extension name="coverage">
         <pattern>
@@ -109,52 +137,18 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.DefaultToolRentalTest" />
-      <option name="METHOD_NAME" value="testIndependenceDay" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DefaultToolRentalTest.testLaborDay" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ToolRental" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.DefaultToolRentalTest" />
-      <option name="METHOD_NAME" value="testLaborDay" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DefaultToolRentalTest.two" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ToolRental" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.DefaultToolRentalTest" />
-      <option name="METHOD_NAME" value="two" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DefaultToolRentalTest" />
-        <item itemvalue="JUnit.DefaultToolRentalTest.testIndependenceDay" />
-        <item itemvalue="JUnit.DefaultToolRentalTest.testLaborDay" />
-        <item itemvalue="JUnit.DefaultToolRentalTest.two" />
-        <item itemvalue="JUnit.DefaultToolRentalTest.one" />
+        <item itemvalue="JUnit.test in ToolRental" />
+        <item itemvalue="JUnit.HolidayManagerTest" />
+        <item itemvalue="JUnit.HolidayManagerTest.testIsHoliday" />
+        <item itemvalue="JUnit.DefaultToolFactoryTest.testGenerateTool" />
+        <item itemvalue="JUnit.DefaultToolTypeFactoryTest" />
       </list>
     </recent_temporary>
   </component>

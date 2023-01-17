@@ -13,16 +13,12 @@ public class DefaultToolRental implements ToolRental {
     private Date checkout;
     private int duration;
     private int discount;
-    private SimpleDateFormat dateFormatter;
-    Calendar calendar;
-    private Date dueDate;
-
-    private HolidayManager holidayManager;
-    private NumberFormat currencyFormatter;
+    private final SimpleDateFormat dateFormatter;
+    private final HolidayManager holidayManager;
+    private final NumberFormat currencyFormatter;
 
     public DefaultToolRental() {
         dateFormatter = new SimpleDateFormat( "MM-dd-yy" );
-        calendar = Calendar.getInstance();
         holidayManager = new HolidayManager();
         currencyFormatter = NumberFormat.getCurrencyInstance();
     }
@@ -35,11 +31,6 @@ public class DefaultToolRental implements ToolRental {
     @Override
     public void setCheckoutDate(Date checkout) {
         this.checkout = checkout;
-
-        calendar.setTime( checkout );
-        calendar.add(Calendar.DATE, duration);
-
-        this.dueDate = calendar.getTime();
     }
 
     @Override
@@ -48,8 +39,6 @@ public class DefaultToolRental implements ToolRental {
             throw new Exception( "Rental day count is not 1 or greater" );
 
         this.duration = duration;
-
-        setCheckoutDate( checkout );
     }
 
     @Override
@@ -60,15 +49,23 @@ public class DefaultToolRental implements ToolRental {
         this.discount = discount;
     }
 
+    public Date getDueDate() {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime( checkout );
+        calendar.add(Calendar.DATE, duration);
+
+        return calendar.getTime();
+    }
+
     @Override
     public void generateAgreement() {
         System.out.println("---------------------------------");
-        System.out.println( "Tool code: " + tool.getCode() );
+        System.out.println( "Tool code: " + tool.getToolCode() );
         System.out.println( "Tool type: " + tool.getToolType().getType() );
         System.out.println( "Tool brand: " + tool.getBrand().getName() );
         System.out.println( "Rental days: " + duration );
         System.out.println( "Checkout date: " + formatDate( checkout ) );
-        System.out.println( "Due date: " + formatDate(dueDate) );
+        System.out.println( "Due date: " + formatDate( getDueDate() ) );
         System.out.println( "Daily rental charge: " + formatCurrency( tool.getToolType().getDailyCharge() ) );
         System.out.println( "Charge days: " + getChargeDays() );
         System.out.println( "Pre-discount charge: " + formatCurrency( getPreDiscountCharge() ) );
@@ -87,9 +84,13 @@ public class DefaultToolRental implements ToolRental {
         boolean chargeWeekend = tool.getToolType().getWeekendCharge();
         boolean chargeHolidays = tool.getToolType().getHolidayCharge();
 
+        Calendar calendar = Calendar.getInstance();
+
         calendar.setTime( checkout );
 
-        while ( !(calendar.getTime()).after(dueDate) ) {
+        Date dueDate = getDueDate();
+
+        while ( !(calendar.getTime()).after( dueDate ) ) {
             int dayOfWeek = calendar.get( Calendar.DAY_OF_WEEK );
 
             if ( holidayManager.isHoliday( calendar.getTime() ) ) {
@@ -134,6 +135,4 @@ public class DefaultToolRental implements ToolRental {
         double discountAmount = calculateDiscountAmount();
         return preDiscountCharge - discountAmount;
     }
-
-
 }

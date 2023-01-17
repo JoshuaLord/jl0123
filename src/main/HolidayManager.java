@@ -68,5 +68,11 @@ public class HolidayManager {
         return false;
     }
 
+    public void debugCalendar( Calendar calendar ) {
+        System.out.println("Month: " + calendar.get( Calendar.MONTH) );
+        System.out.println("Day: " + calendar.get( Calendar.DATE) );
+        System.out.println("Year: " + calendar.get( Calendar.YEAR) );
+    }
+
 
 }

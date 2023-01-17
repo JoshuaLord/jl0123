@@ -8,20 +8,21 @@ import main.tools.types.ToolType;
 public class DefaultToolFactory implements ToolFactory {
 
     ToolTypeFactory toolTypeFactory;
-    Brand brand;
+    BrandFactory brandFactory;
 
     public DefaultToolFactory() {
         toolTypeFactory = new DefaultToolTypeFactory();
+        brandFactory = new DefaultBrandFactory();
     }
 
     @Override
     public Tool generateTool(String code) {
 
         ToolType type = toolTypeFactory.generateToolType( parseToolType( code ) );
-        Brand brand = new DefaultBrand( parseBrand( code ) );
+        Brand brand = brandFactory.generateBrand( parseBrand( code ) );
 
         Tool tool = new DefaultTool();
-        tool.setCode( code );
+        tool.setToolCode( code );
         tool.setToolType( type );
         tool.setBrand( brand );
 

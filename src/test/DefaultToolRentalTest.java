@@ -15,7 +15,7 @@ import static org.junit.Assert.fail;
 public class DefaultToolRentalTest {
 
     private static final double DELTA = 1e-15;
-    ToolFactory toolFactory = new DefaultToolFactory();
+    final ToolFactory toolFactory = new DefaultToolFactory();
 
     @Test
     public void one() {

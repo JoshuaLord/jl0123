@@ -5,8 +5,8 @@ import main.tools.types.ToolType;
 
 public interface Tool {
 
-    public void setCode( String code );
-    public String getCode();
+    public void setToolCode( String code );
+    public String getToolCode();
 
     public void setToolType( ToolType type );
     public ToolType getToolType();

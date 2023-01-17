@@ -10,12 +10,12 @@ public class DefaultTool implements Tool {
     private Brand brand;
 
     @Override
-    public void setCode(String code) {
+    public void setToolCode(String code) {
         this.code = code;
     }
 
     @Override
-    public String getCode() {
+    public String getToolCode() {
         return code;
     }
 

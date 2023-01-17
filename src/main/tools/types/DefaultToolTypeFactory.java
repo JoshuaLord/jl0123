@@ -3,7 +3,7 @@ package main.tools.types;
 public class DefaultToolTypeFactory implements ToolTypeFactory {
     @Override
     public ToolType generateToolType(String type) {
-        switch (type) {
+        switch (type.toUpperCase()) {
             case "CHN":
                 return new Chainsaw();
             case "LAD":
